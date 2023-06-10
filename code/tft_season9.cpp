@@ -35,7 +35,7 @@ int selected_size; // 유저가 챔피언을 몇 개 선택했는지
 // origin1
 int Darkin[59];
 int Demacia[59];
-int Freljord[59];
+int Freljord[59];  
 int Ionia[59];
 int Noxus[59];
 int Piltover[59];
