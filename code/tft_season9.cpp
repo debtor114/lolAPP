@@ -24,7 +24,6 @@ vector < tuple <string, string, string, string, string, int> > selected_champion
 vector < tuple <string, string, string, string, string, int> > level4_down_champions;
 vector < tuple <string, string, string, string, string, int> > level6_down_champions;
 vector < tuple <string, string, string, string, string, int> > level7_up_champions;
-vector < tuple <string, string, string, string, string, int> > user_select_champions;
 
 // 경우의 수 계산 전에 선택한 챔피언 집합들
 vector < tuple <string, string, string, string, string, int> > user_select_champ;
@@ -35,7 +34,7 @@ int selected_size; // 유저가 챔피언을 몇 개 선택했는지
 // origin1
 int Darkin[59];
 int Demacia[59];
-int Freljord[59];  
+int Freljord[59];
 int Ionia[59];
 int Noxus[59];
 int Piltover[59];
@@ -66,40 +65,74 @@ int Strategist[59];
 int Technogenius[59];
 
 
+// fix synerge
+int darkin;
+int demacia;
+int freljord;
+int ionia;
+int noxus;
+int piltover;
+int shadow_Isles;
+int shurima;
+int targon;
+int vvoid;
+int wanderer;
+int yordle;
+int zaun;
+int bastion;
+int bruiser;
+int challenger;
+int deadeye;
+int empress;
+int gunner;
+int invoker;
+int juggernaut;
+int multicaster;
+int redeemer;
+int rogue;
+int slayer;
+int sorcerer;
+int strategist;
+int technogenius;
+
+
+
 // 계산이 완료된 후 시너지를 초기화 해주는 함수
 void init(int index) {
-    Darkin[index] = 0;
-    Demacia[index] = 0;
-    Freljord[index] = 0;
-    Ionia[index] = 0;
-    Noxus[index] = 0;
-    Piltover[index] = 0;
-    Shadow_Isles[index] = 0;
-    Shurima[index] = 0;
-    Targon[index] = 0;
-    Void[index] = 0;
-    Wanderer[index] = 0;
-    Yordle[index] = 0;
-    Zaun[index] = 0;
+
+    // origins
+    Darkin[index] = darkin;
+    Demacia[index] = demacia;
+    Freljord[index] = freljord;
+    Ionia[index] = ionia;
+    Noxus[index] = noxus;
+    Piltover[index] = piltover;
+    Shadow_Isles[index] = shadow_Isles;
+    Shurima[index] = shurima;
+    Targon[index] = targon;
+    Void[index] = vvoid;
+    Wanderer[index] = wanderer;
+    Yordle[index] = yordle;
+    Zaun[index] = zaun;
     
 
     // classes
-    Bastion[index] = 0;
-    Bruiser[index] = 0;
-    Deadeye[index] = 0;
-    Challenger[index] = 0;
-    Deadeye[index] = 0;
-    Empress[index] = 0;
-    Gunner[index] = 0;
-    Invoker[index] = 0;
-    Juggernaut[index] = 0;
-    Multicaster[index] = 0;
-    Redeemer[index] = 0;
-    Rogue[index] = 0;
-    Slayer[index] = 0;
-    Sorcerer[index] = 0;
-    Strategist[index] = 0;
-    Technogenius[index] = 0;
+    Bastion[index] = bastion;
+    Bruiser[index] = bruiser;
+    Deadeye[index] = deadeye;
+    Challenger[index] = challenger;
+    Empress[index] = empress;
+    Gunner[index] = gunner;
+    Invoker[index] = invoker;
+    Juggernaut[index] = juggernaut;
+    Multicaster[index] = multicaster;
+    Redeemer[index] = redeemer;
+    Rogue[index] = rogue;
+    Slayer[index] = slayer;
+    Sorcerer[index] = sorcerer;
+    Strategist[index] = strategist;
+    Technogenius[index] = technogenius;
+
 }
 
 void champions_info() {
@@ -113,7 +146,6 @@ void champions_info() {
     champions.push_back(make_tuple("뽀삐", "Demacia", "Yordle", "Bastion", "", 1));
     champions.push_back(make_tuple("오리아나", "Piltover", "", "Sorcerer", "", 1)); 
     champions.push_back(make_tuple("레넥톤", "Shurima", "", "Bruiser", "", 1)); 
-    champions.push_back(make_tuple("블라디미르", "Void", "Slayer", "", "", 1));
     champions.push_back(make_tuple("사미라", "Noxus", "", "Challenger", "", 1));
     champions.push_back(make_tuple("트리스타나", "Yordle", "", "Gunner", "", 1)); 
     champions.push_back(make_tuple("비에고", "Shadow_Isles", "", "Rogue", "", 1)); 
@@ -127,7 +159,7 @@ void champions_info() {
     champions.push_back(make_tuple("세트", "Ionia", "", "Juggernaut", "", 2)); 
     champions.push_back(make_tuple("스웨인", "Noxus", "", "Sorcerer", "Strategist", 2)); 
     champions.push_back(make_tuple("탈리야", "Shurima", "", "Multicaster", "", 2));
-    champions.push_back(make_tuple("티모", "Yordle", "", "Bruiser", "Strategist", 2));
+    champions.push_back(make_tuple("티모", "Yordle", "", "Multicaster", "Strategist", 2));
     champions.push_back(make_tuple("바이", "Piltover", "", "Bruiser", "", 2));
     champions.push_back(make_tuple("워윅", "Zaun", "", "Challenger", "Juggernaut", 2)); 
     champions.push_back(make_tuple("제드", "Ionia", "", "Rogue", "Slayer", 2)); 
@@ -166,6 +198,7 @@ void champions_info() {
     champions.push_back(make_tuple("라이즈", "Wanderer", "", "Invoker", "", 5)); 
     champions.push_back(make_tuple("세나", "Shadow_Isles", "", "Gunner", "Redeemer", 5)); 
     champions.push_back(make_tuple("사이온", "Noxus", "", "Bruiser", "", 5)); 
+    champions.push_back(make_tuple("벨베즈", "Void", "", "Empress", "", 5)); 
 }
 
 
@@ -196,43 +229,88 @@ void makingChampionList(int argc, char** argv) {
 
     // 유저가 선택한 챔피언(user_select_champ)이 선택될 챔피언 집합(level4_down_champions.. etc..)에 중복 포함되는 걸 방지
     bool flag;
-
-    // 주어진 챔피언 속에서만 결과를 찾고싶다면
-    if (user_select_champ.size() > stoi(argv[1])) {
-        for (int i = 0; i < user_select_champ.size(); i++) {  
-            user_select_champions.push_back(user_select_champ[i]);
-        }
-    }
-
-    else {
-        for (int i = 0; i < champions.size(); i++) {    
-            flag = true;    
-            for (int j = 0; j < selected_size; j++) {
-                if (get<0>(champions[i]) == get<0>(user_select_champ[j])) {
-                    flag = false;
-                    break;
-                }
-            }
-
-            if (flag) {
-                if (get<5>(champions[i]) < 4) level4_down_champions.push_back(champions[i]);
-                if (get<5>(champions[i]) < 5) level6_down_champions.push_back(champions[i]);
-                level7_up_champions.push_back(champions[i]);
+    for (int i = 0; i < champions.size(); i++) {    
+        flag = true;    
+        for (int j = 0; j < selected_size; j++) {
+            if (get<0>(champions[i]) == get<0>(user_select_champ[j])) {
+                flag = false;
+                break;
             }
         }
+
+        if (flag) {
+            if (get<5>(champions[i]) < 4) level4_down_champions.push_back(champions[i]);
+            if (get<5>(champions[i]) < 5) level6_down_champions.push_back(champions[i]);
+            level7_up_champions.push_back(champions[i]);
+        }
     }
+    
+}
+
+void addCharcteristic() {
+    cout << "증강체나 특성의 고서로 부터 얻은 시너지를 적용합니다." << endl;
+    cout << "특성을 한개 씩 나열해주세요" << endl;
+    cout << "ex) 2그림자군도, 아이오니아" << endl;
+    cout << " => \"2그림자군도\" 입력후 enter" << endl;
+    cout << " => \"1아이오니아\" 입력후 enter" << endl;
+    cout << " => \"END\"입력후 enter" << endl;
+
+    while(1) {
+        string traitString, traits;
+        int num;
+
+        cin >> traitString;
+        if (traitString == "END") break;
+
+
+        num = stoi(traitString.substr(0,1));
+        traits = traitString.substr(1);
+        
+        if (traits == "다르킨") darkin += num;
+        else if (traits == "데마시아") demacia += num;
+        else if (traits == "프렐요드") freljord += num;
+        else if (traits == "아이오니아") ionia += num;
+        else if (traits == "녹서스") noxus += num;
+        else if (traits == "필트오버") piltover += num;
+        else if (traits == "그림자군도") shadow_Isles += num;
+        else if (traits == "슈리마") shurima += num;
+        else if (traits == "타곤") targon += num;
+        else if (traits == "공허") vvoid += num;
+        else if (traits == "방랑자") wanderer += num;
+        else if (traits == "요들") yordle += num;
+        else if (traits == "자운") zaun += num;
+  
+        // classes
+        else if (traits == "요새") bastion += num;
+        else if (traits == "난동꾼") bruiser += num;
+        else if (traits == "도전자") challenger += num;
+        else if (traits == "백발백중") deadeye += num;
+        else if (traits == "여제") empress += num;
+        else if (traits == "사수") gunner += num;
+        else if (traits == "기원자") invoker += num;
+        else if (traits == "전쟁기계") juggernaut += num;
+        else if (traits == "연쇄마법사") multicaster += num;  
+        else if (traits == "구원자") redeemer += num;
+        else if (traits == "불한당") rogue += num;
+        else if (traits == "학살자") slayer += num;
+        else if (traits == "마법사") sorcerer += num;
+        else if (traits == "전략가") strategist += num;
+        else if (traits == "발명의대가") technogenius += num;
+    }
+    
+
 }
 
 // 선택이 완료된 조합의 시너지 점수를 계산하는 함수
 int synerge_check(int index) {
     int synerge_count = 0;
-    // 1 : 5
+    // 1 : 3
     // 2-3-4: 5 10 18
     // 2-4-6: 5 12 25
     // 2-4-6-8: 5 10 15 33
     // 3-5: 8 15
     // 3-5-7: 8 15 30
-    // 3-5-7-9: 8 14 22 45
+    // 3-5-7-9: 8 14 28 45
     // 3-6: 8 18
     // 3-6-8: 8 16 40
     // 3-6-9: 8 16 45
@@ -241,10 +319,10 @@ int synerge_check(int index) {
     // origin
     if (Demacia[index] >= 3 && Demacia[index] < 5) synerge_count += 8;
     else if (Demacia[index] >= 5 && Demacia[index] < 7) synerge_count += 14;  
-    else if (Demacia[index] >= 7 && Demacia[index] < 9) synerge_count += 22;  
+    else if (Demacia[index] >= 7 && Demacia[index] < 9) synerge_count += 28;  
     else if (Demacia[index] >= 9) synerge_count += 45;
 
-    if (Darkin[index] == 1) synerge_count += 5;
+    if (Darkin[index] == 1) synerge_count += 3;
   
     if (Freljord[index] >= 2 && Freljord[index] < 3) synerge_count += 5;
     else if (Freljord[index] >= 3 && Freljord[index] < 4) synerge_count += 10;  
@@ -267,18 +345,18 @@ int synerge_check(int index) {
 
     if (Shurima[index] >= 3 && Shurima[index] < 5) synerge_count += 8; 
     else if (Shurima[index] >= 5 && Shurima[index] < 7) synerge_count += 14; 
-    else if (Shurima[index] >= 7 && Shurima[index] < 9) synerge_count += 22; 
+    else if (Shurima[index] >= 7 && Shurima[index] < 9) synerge_count += 28; 
     else if (Shurima[index] >= 9) synerge_count += 45;
 
     if (Targon[index] >= 2 && Targon[index] < 3) synerge_count += 5;
     else if (Targon[index] >= 3 && Targon[index] < 4) synerge_count += 10;
-    else if (Targon[index] >= 4) synerge_count += 10;  
+    else if (Targon[index] >= 4) synerge_count += 20;  
 
     if (Void[index] >= 3 && Void[index] < 6) synerge_count += 8;
     else if (Void[index] >= 6 && Void[index] < 8) synerge_count += 16; 
     else if (Void[index] >= 8) synerge_count += 40;
 
-    if (Wanderer[index] == 1) synerge_count += 5;
+    if (Wanderer[index] == 1) synerge_count += 3;
 
     if (Yordle[index] >= 3 && Yordle[index] < 5) synerge_count += 8;
     else if (Yordle[index] >= 5) synerge_count += 15;
@@ -308,7 +386,7 @@ int synerge_check(int index) {
     else if (Deadeye[index] >= 4 && Deadeye[index] < 6) synerge_count += 12;
     else if (Deadeye[index] >= 6) synerge_count += 25;
 
-    if (Empress[index] == 1 ) synerge_count += 5;
+    if (Empress[index] == 1 ) synerge_count += 3;
 
     if (Gunner[index] >= 2 && Gunner[index] < 4) synerge_count += 5;
     else if (Gunner[index] >= 4 && Gunner[index] < 6) synerge_count += 12;
@@ -325,7 +403,7 @@ int synerge_check(int index) {
     if (Multicaster[index] >= 2 && Multicaster[index] < 4) synerge_count += 5;
     else if (Multicaster[index] >= 4) synerge_count += 12;  
 
-    if (Redeemer[index] == 1) synerge_count += 5;  
+    if (Redeemer[index] == 1) synerge_count += 3;  
 
     if (Rogue[index] >= 2 && Rogue[index] < 4) synerge_count += 10;
     else if (Rogue[index] >= 4) synerge_count += 20;
@@ -346,7 +424,7 @@ int synerge_check(int index) {
     else if (Strategist[index] >= 4 && Strategist[index] < 5) synerge_count += 15;
     else if (Strategist[index] >= 5) synerge_count += 27; 
 
-    if (Technogenius[index] == 1) synerge_count += 5; 
+    if (Technogenius[index] == 1) synerge_count += 3; 
 
     return synerge_count;
 }
@@ -364,28 +442,15 @@ void synerge_add(tuple <string, string, string, string, string, int> &champion, 
     else if (origin1 == "Freljord") Freljord[index]++;
     else if (origin1 == "Ionia") Ionia[index]++;
     else if (origin1 == "Noxus") Noxus[index]++;
+    else if (origin1 == "Piltover") Piltover[index]++;
     else if (origin1 == "Shadow_Isles") Shadow_Isles[index]++;
     else if (origin1 == "Shurima") Shurima[index]++;
-    else if (origin1 == "Piltover") Piltover[index]++;
     else if (origin1 == "Targon") Targon[index]++;
-    else if (origin1 == "Yordle") Yordle[index]++;
-    else if (origin1 == "Wanderer") Wanderer[index]++;
-    else if (origin1 == "Zaun") Zaun[index]++;
     else if (origin1 == "Void") Void[index]++;
-    else if (origin1 == "Bastion") Bastion[index]++;
-    else if (origin1 == "Bruiser") Bruiser[index]++;
-    else if (origin1 == "Deadeye") Deadeye[index]++;
-    else if (origin1 == "Multicaster") Multicaster[index]++;  
-    else if (origin1 == "Slayer") Slayer[index]++;
-    else if (origin1 == "Challenger") Challenger[index]++;
-    else if (origin1 == "Invoker") Invoker[index]++;
-    else if (origin1 == "Gunner") Gunner[index]++;
-    else if (origin1 == "Juggernaut") Juggernaut[index]++;
-    else if (origin1 == "Rogue") Rogue[index]++;
-    else if (origin1 == "Redeemer") Redeemer[index]++;
-    else if (origin1 == "Empress") Empress[index]++;
-    else if (origin1 == "Sorcerer") Sorcerer[index]++;
-    else if (origin1 == "Strategist") Strategist[index]++;
+    else if (origin1 == "Wanderer") Wanderer[index]++;
+    else if (origin1 == "Yordle") Yordle[index]++;
+    else if (origin1 == "Zaun") Zaun[index]++;
+    
 
     // origin2
     if (origin2 == "Darkin") Darkin[index]++;
@@ -393,94 +458,58 @@ void synerge_add(tuple <string, string, string, string, string, int> &champion, 
     else if (origin2 == "Freljord") Freljord[index]++;
     else if (origin2 == "Ionia") Ionia[index]++;
     else if (origin2 == "Noxus") Noxus[index]++;
+    else if (origin2 == "Piltover") Piltover[index]++;
     else if (origin2 == "Shadow_Isles") Shadow_Isles[index]++;
     else if (origin2 == "Shurima") Shurima[index]++;
-    else if (origin2 == "Piltover") Piltover[index]++;
     else if (origin2 == "Targon") Targon[index]++;
-    else if (origin2 == "Yordle") Yordle[index]++;
-    else if (origin2 == "Wanderer") Wanderer[index]++;
-    else if (origin2 == "Zaun") Zaun[index]++;
     else if (origin2 == "Void") Void[index]++;
-    else if (origin2 == "Bastion") Bastion[index]++;
-    else if (origin2 == "Bruiser") Bruiser[index]++;
-    else if (origin2 == "Deadeye") Deadeye[index]++;
-    else if (origin2 == "Multicaster") Multicaster[index]++;  
-    else if (origin2 == "Slayer") Slayer[index]++;
-    else if (origin2 == "Challenger") Challenger[index]++;
-    else if (origin2 == "Invoker") Invoker[index]++;
-    else if (origin2 == "Gunner") Gunner[index]++;
-    else if (origin2 == "Juggernaut") Juggernaut[index]++;
-    else if (origin2 == "Rogue") Rogue[index]++;
-    else if (origin2 == "Redeemer") Redeemer[index]++;
-    else if (origin2 == "Empress") Empress[index]++;
-    else if (origin2 == "Sorcerer") Sorcerer[index]++;
-    else if (origin2 == "Strategist") Strategist[index]++;
+    else if (origin2 == "Wanderer") Wanderer[index]++;
+    else if (origin2 == "Yordle") Yordle[index]++;
+    else if (origin2 == "Zaun") Zaun[index]++;
+
 
     // classes1
     if (classes1 == "Bastion") Bastion[index]++;
     else if (classes1 == "Bruiser") Bruiser[index]++;
-    else if (classes1 == "Deadeye") Deadeye[index]++;
-    else if (classes1 == "Multicaster") Multicaster[index]++;  
-    else if (classes1 == "Slayer") Slayer[index]++;
     else if (classes1 == "Challenger") Challenger[index]++;
-    else if (classes1 == "Invoker") Invoker[index]++;
-    else if (classes1 == "Gunner") Gunner[index]++;
-    else if (classes1 == "Juggernaut") Juggernaut[index]++;
-    else if (classes1 == "Rogue") Rogue[index]++;
-    else if (classes1 == "Redeemer") Redeemer[index]++;
+    else if (classes1 == "Deadeye") Deadeye[index]++;
     else if (classes1 == "Empress") Empress[index]++;
+    else if (classes1 == "Gunner") Gunner[index]++;
+    else if (classes1 == "Invoker") Invoker[index]++;
+    else if (classes1 == "Juggernaut") Juggernaut[index]++;
+    else if (classes1 == "Multicaster") Multicaster[index]++;  
+    else if (classes1 == "Redeemer") Redeemer[index]++;
+    else if (classes1 == "Rogue") Rogue[index]++;
+    else if (classes1 == "Slayer") Slayer[index]++;
     else if (classes1 == "Sorcerer") Sorcerer[index]++;
     else if (classes1 == "Strategist") Strategist[index]++;
-    else if (classes1 == "Darkin") Darkin[index]++;
-    else if (classes1 == "Demacia") Demacia[index]++;
-    else if (classes1 == "Freljord") Freljord[index]++;
-    else if (classes1 == "Ionia") Ionia[index]++;
-    else if (classes1 == "Noxus") Noxus[index]++;
-    else if (classes1 == "Shadow_Isles") Shadow_Isles[index]++;
-    else if (classes1 == "Shurima") Shurima[index]++;
-    else if (classes1 == "Piltover") Piltover[index]++;
-    else if (classes1 == "Targon") Targon[index]++;
-    else if (classes1 == "Yordle") Yordle[index]++;
-    else if (classes1 == "Wanderer") Wanderer[index]++;
-    else if (classes1 == "Zaun") Zaun[index]++;
-    else if (classes1 == "Void") Void[index]++;
     else if (classes1 == "Technogenius") Technogenius[index]++;
+
 
     // classes2, 특성이 2개 있는 챔피언들 처리
     if (classes2 == "Bastion") Bastion[index]++;
     else if (classes2 == "Bruiser") Bruiser[index]++;
-    else if (classes2 == "Deadeye") Deadeye[index]++;
-    else if (classes2 == "Multicaster") Multicaster[index]++;  
-    else if (classes2 == "Slayer") Slayer[index]++;
     else if (classes2 == "Challenger") Challenger[index]++;
-    else if (classes2 == "Invoker") Invoker[index]++;
-    else if (classes2 == "Gunner") Gunner[index]++;
-    else if (classes2 == "Juggernaut") Juggernaut[index]++;
-    else if (classes2 == "Rogue") Rogue[index]++;
-    else if (classes2 == "Redeemer") Redeemer[index]++;
+    else if (classes2 == "Deadeye") Deadeye[index]++;
     else if (classes2 == "Empress") Empress[index]++;
+    else if (classes2 == "Gunner") Gunner[index]++;
+    else if (classes2 == "Invoker") Invoker[index]++;
+    else if (classes2 == "Juggernaut") Juggernaut[index]++;
+    else if (classes2 == "Multicaster") Multicaster[index]++;  
+    else if (classes2 == "Redeemer") Redeemer[index]++;
+    else if (classes2 == "Rogue") Rogue[index]++;
+    else if (classes2 == "Slayer") Slayer[index]++;
     else if (classes2 == "Sorcerer") Sorcerer[index]++;
     else if (classes2 == "Strategist") Strategist[index]++;
-    else if (classes2 == "Darkin") Darkin[index]++;
-    else if (classes2 == "Demacia") Demacia[index]++;
-    else if (classes2 == "Freljord") Freljord[index]++;
-    else if (classes2 == "Ionia") Ionia[index]++;
-    else if (classes2 == "Noxus") Noxus[index]++;
-    else if (classes2 == "Shadow_Isles") Shadow_Isles[index]++;
-    else if (classes2 == "Shurima") Shurima[index]++;
-    else if (classes2 == "Piltover") Piltover[index]++;
-    else if (classes2 == "Targon") Targon[index]++;
-    else if (classes2 == "Yordle") Yordle[index]++;
-    else if (classes2 == "Wanderer") Wanderer[index]++;
-    else if (classes2 == "Zaun") Zaun[index]++;
-    else if (classes2 == "Void") Void[index]++;
     else if (classes2 == "Technogenius") Technogenius[index]++;
+
+
 
 }
 
 
-int synerge_cost(tuple <string, string, string, string, string, int> &selected_champion) {
-    return get<5>(selected_champion);
+int twostar_champion_cost(tuple <string, string, string, string, string, int> &selected_champion) {
+    return 3*get<5>(selected_champion);
 }
 
 // 선택이 완료된 조합의 시너지를 출력해주는 함수
@@ -610,62 +639,20 @@ int level;
 // mutex
 recursive_mutex m;
 
-void combination_custom (int index, int thread_index) {
-    string selected_champ;
-    int cost = 0;
-    if(pick[thread_index].size() == level) { 
-        for(int i = 0; i < pick[thread_index].size(); i++) {
-            synerge_add(user_select_champions[pick[thread_index][i]], thread_index); 
-            cost += synerge_cost(user_select_champions[pick[thread_index][i]]);
-            selected_champ.append(get<0>(user_select_champions[pick[thread_index][i]])); 
-            selected_champ.append(" ");
-        }
-
-       for(int i = 0; i < selected_size; i++) {
-            synerge_add(user_select_champ[i], thread_index);
-            cost += synerge_cost(user_select_champ[i]);
-            selected_champ.append(get<0>(user_select_champ[i]));
-            selected_champ.append(" ");
-        }  
-
-        int synerge_value = synerge_check(thread_index);
-
-        string synerge = "";
-        synerge = synerge_print(thread_index);
-    
-        // critical section
-        m.lock();
-        if (synerge.length() != 0)
-            overall_combination.push(make_tuple(synerge_value, cost, selected_champ, synerge));
-        m.unlock();
-        
-        init(thread_index);
-        return;
-    }
-
-    for(int i = index; i < user_select_champions.size(); i++) {
-        pick[thread_index].push_back(i);
-        combination_custom(i+1, thread_index);
-        pick[thread_index].pop_back();
-        if (pick[thread_index].size() == 0) return;
-        
-    }
-}
-
 void combination_level4_down(int index, int thread_index) {
     string selected_champ;
     int cost = 0;
     if(pick[thread_index].size() == level - selected_size) { 
         for(int i = 0; i < pick[thread_index].size(); i++) {
             synerge_add(level4_down_champions[pick[thread_index][i]], thread_index); 
-            cost += synerge_cost(level4_down_champions[pick[thread_index][i]]);
+            cost += twostar_champion_cost(level4_down_champions[pick[thread_index][i]]);
             selected_champ.append(get<0>(level4_down_champions[pick[thread_index][i]])); 
             selected_champ.append(" ");
         }
 
        for(int i = 0; i < selected_size; i++) {
             synerge_add(user_select_champ[i], thread_index);
-            cost += synerge_cost(user_select_champ[i]);
+            cost += twostar_champion_cost(user_select_champ[i]);
             selected_champ.append(get<0>(user_select_champ[i]));
             selected_champ.append(" ");
         }  
@@ -700,14 +687,14 @@ void combination_level6_down(int index, int thread_index) {
     if(pick[thread_index].size() == level - selected_size) { 
         for(int i = 0; i < pick[thread_index].size(); i++) {
             synerge_add(level6_down_champions[pick[thread_index][i]], thread_index); 
-            cost += synerge_cost(level6_down_champions[pick[thread_index][i]]);
+            cost += twostar_champion_cost(level6_down_champions[pick[thread_index][i]]);
             selected_champ.append(get<0>(level6_down_champions[pick[thread_index][i]])); 
             selected_champ.append(" ");
         }
 
        for(int i = 0; i < selected_size; i++) {
             synerge_add(user_select_champ[i], thread_index);
-            cost += synerge_cost(user_select_champ[i]);
+            cost += twostar_champion_cost(user_select_champ[i]);
             selected_champ.append(get<0>(user_select_champ[i]));
             selected_champ.append(" ");
         }  
@@ -742,14 +729,14 @@ void combination_level7_up(int index, int thread_index) {
     if(pick[thread_index].size() == level - selected_size) { 
         for(int i = 0; i < pick[thread_index].size(); i++) {
             synerge_add(level7_up_champions[pick[thread_index][i]], thread_index);
-            cost += synerge_cost(level7_up_champions[pick[thread_index][i]]);
+            cost += twostar_champion_cost(level7_up_champions[pick[thread_index][i]]);
             selected_champ.append(get<0>(level7_up_champions[pick[thread_index][i]])); 
             selected_champ.append(" ");
         }
 
        for(int i = 0; i < selected_size; i++) {
             synerge_add(user_select_champ[i], thread_index);
-            cost += synerge_cost(user_select_champ[i]);
+            cost += twostar_champion_cost(user_select_champ[i]);
             selected_champ.append(get<0>(user_select_champ[i]));
             selected_champ.append(" ");
         }  
@@ -786,73 +773,63 @@ int main (int argc, char** argv) {
     ios::sync_with_stdio(false);
 
     level = stoi(argv[1]);
-    start = time(NULL);
+    
 
     // champ vector creation
     champions_info();
     makingChampionList(argc, argv);
+    addCharcteristic();
 
     vector <thread> threads;
 
+    start = time(NULL);
     cout << "Processing... " << endl;
 
-    if (selected_size > level) {
-        for (int i = 0; i <= user_select_champions.size()-level; i++) {
-            threads.push_back(thread(combination_custom, i, i));
-        }
 
-        for (int i = 0; i < threads.size(); i++) {
-            if (threads[i].joinable()) threads[i].join();
+    // level check
+    if (level <= 4) {
+        if (selected_size == level) combination_level4_down(0, 0);
+        else {
+            for (int i = 0; i <= level4_down_champions.size()-level+selected_size; i++) {
+                threads.push_back(thread(combination_level4_down, i, i));
+            }
+
+            for (int i = 0; i < threads.size(); i++) {
+                if (threads[i].joinable())
+                    threads[i].join();
+            }
+        }
+    }
+
+    else if (level > 4 && level <= 6) {
+        if (selected_size == level) combination_level6_down(0, 0);
+        else {
+            for (int i = 0; i <= level6_down_champions.size()-level+selected_size; i++) {
+                threads.push_back(thread(combination_level6_down, i, i));
+            }
+
+            for (int i = 0; i < threads.size(); i++) {
+                if (threads[i].joinable())
+                    threads[i].join();
+            }
         }
     }
 
     else {
-
-        // level check
-        if (level <= 4) {
-            if (selected_size == level) combination_level4_down(0, 0);
-            else {
-                for (int i = 0; i <= level4_down_champions.size()-level+selected_size; i++) {
-                    threads.push_back(thread(combination_level4_down, i, i));
-                }
-
-                for (int i = 0; i < threads.size(); i++) {
-                    if (threads[i].joinable())
-                        threads[i].join();
-                }
-            }
-        }
-
-        else if (level > 4 && level <= 6) {
-            if (selected_size == level) combination_level6_down(0, 0);
-            else {
-                for (int i = 0; i <= level6_down_champions.size()-level+selected_size; i++) {
-                    threads.push_back(thread(combination_level6_down, i, i));
-                }
-
-                for (int i = 0; i < threads.size(); i++) {
-                    if (threads[i].joinable())
-                        threads[i].join();
-                }
-            }
-        }
-
+        if (selected_size == level) combination_level7_up(0, 0);
         else {
-            if (selected_size == level) combination_level7_up(0, 0);
-            else {
-                for (int i = 0; i <= level7_up_champions.size()-level+selected_size; i++) {
-                    threads.push_back(thread(combination_level7_up, i, i));       
-                }
+            for (int i = 0; i <= level7_up_champions.size()-level+selected_size; i++) {
+                threads.push_back(thread(combination_level7_up, i, i));       
+            }
 
-                for (int i = 0; i < threads.size(); i++) {
-                    if (threads[i].joinable())
-                        threads[i].join();
-                }
+            for (int i = 0; i < threads.size(); i++) {
+                if (threads[i].joinable())
+                    threads[i].join();
             }
         }
-
     }
 
+    
     end = time(NULL);
     cout << "calculation time: " << (double)(end - start) << "\n";
 
