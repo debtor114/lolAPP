@@ -82,67 +82,67 @@ void init(int index) {
 }
 
 void champions_info() {
-    champions.push_back(make_tuple("ë…¹í„´", "battlecast", "inflitrator", "", 1)); // Nocturne
-    champions.push_back(make_tuple("ë§íŒŒì´íŠ¸", "rebel", "brawler", "", 1)); // Malphight
-    champions.push_back(make_tuple("ì§ìŠ¤", "rebel", "demolitionist", "", 1)); // Ziggs
-    champions.push_back(make_tuple("ë½€ì‚", "starguardian", "vanguard", "", 1)); // Poppy
-    champions.push_back(make_tuple("ì¡°ì´", "starguardian", "sorcerer", "", 1)); // Zoe
-    champions.push_back(make_tuple("í”¼ì˜¤ë¼", "cybernetic", "blademaster", "", 1)); // Fiora
-    champions.push_back(make_tuple("ë ˆì˜¤ë‚˜", "cybernetic", "vanguard", "", 1)); // Leona
-    champions.push_back(make_tuple("ì¼€ì´í‹€ë¦°", "chronos", "sniper", "", 1)); // Caitlyn
-    champions.push_back(make_tuple("íŠ¸í˜", "chronos", "sorcerer", "", 1)); // Twisted Fate
-    champions.push_back(make_tuple("ê·¸ë ˆì´ë¸Œì¦ˆ", "space_pirate", "blaster", "", 1)); // Graves
-    champions.push_back(make_tuple("ìì•¼", "celestial", "blademaster", "", 1)); // Xayah
-    champions.push_back(make_tuple("ìë¥´ë°˜", "darkstar", "protector", "", 1)); // Jarvan
-    champions.push_back(make_tuple("ì¼ë¼ì˜¤ì´", "battlecast", "brawler", "", 1)); // illaoi
+    champions.push_back(make_tuple("³ìÅÏ", "battlecast", "inflitrator", "", 1)); // Nocturne
+    champions.push_back(make_tuple("¸»ÆÄÀÌÆ®", "rebel", "brawler", "", 1)); // Malphight
+    champions.push_back(make_tuple("Á÷½º", "rebel", "demolitionist", "", 1)); // Ziggs
+    champions.push_back(make_tuple("»Ç»ß", "starguardian", "vanguard", "", 1)); // Poppy
+    champions.push_back(make_tuple("Á¶ÀÌ", "starguardian", "sorcerer", "", 1)); // Zoe
+    champions.push_back(make_tuple("ÇÇ¿À¶ó", "cybernetic", "blademaster", "", 1)); // Fiora
+    champions.push_back(make_tuple("·¹¿À³ª", "cybernetic", "vanguard", "", 1)); // Leona
+    champions.push_back(make_tuple("ÄÉÀÌÆ²¸°", "chronos", "sniper", "", 1)); // Caitlyn
+    champions.push_back(make_tuple("Æ®Æä", "chronos", "sorcerer", "", 1)); // Twisted Fate
+    champions.push_back(make_tuple("±×·¹ÀÌºêÁî", "space_pirate", "blaster", "", 1)); // Graves
+    champions.push_back(make_tuple("ÀÚ¾ß", "celestial", "blademaster", "", 1)); // Xayah
+    champions.push_back(make_tuple("ÀÚ¸£¹İ", "darkstar", "protector", "", 1)); // Jarvan
+    champions.push_back(make_tuple("ÀÏ¶ó¿ÀÀÌ", "battlecast", "brawler", "", 1)); // illaoi
 
-    champions.push_back(make_tuple("ì• ë‹ˆ", "mech_pilot", "sorcerer", "", 2)); // Annie
-    champions.push_back(make_tuple("ì œë“œ", "rebel", "inflitrator", "", 2)); // Zed
-    champions.push_back(make_tuple("ì•¼ìŠ¤ì˜¤", "rebel", "blademaster", "", 2)); // Yasuo
-    champions.push_back(make_tuple("ë…¸í‹¸ëŸ¬ìŠ¤", "astro", "vanguard", "", 2)); // Nautilus
-    champions.push_back(make_tuple("ì•„ë¦¬", "starguardian", "sorcerer", "", 2)); // Ahri
-    champions.push_back(make_tuple("ë£¨ì‹œì•ˆ", "cybernetic", "blaster", "", 2)); // Lucian
-    champions.push_back(make_tuple("ë¸”ë¦¬ì¸ í¬ë­í¬", "chronos", "brawler", "", 2)); // Blitzcrank
-    champions.push_back(make_tuple("ì‰”", "chronos", "blademaster", "", 2)); // Shen
-    champions.push_back(make_tuple("ëª¨ë°ì¹´ì´ì €", "darkstar", "vanguard", "", 2)); // Mordekaiser
-    champions.push_back(make_tuple("ë‹¤ë¦¬ìš°ìŠ¤", "space_pirate", "mana_reaver", "", 2)); // Darius
-    champions.push_back(make_tuple("ì‹ ì§œì˜¤", "celestial", "protector", "", 2)); // Xin'Zhao
-    champions.push_back(make_tuple("ë¼ì¹¸", "celestial", "protector", "", 2)); // Rakan
-    champions.push_back(make_tuple("ì½”ê·¸ëª¨", "battlecast", "blaster", "", 2)); // Kog'maw
+    champions.push_back(make_tuple("¾Ö´Ï", "mech_pilot", "sorcerer", "", 2)); // Annie
+    champions.push_back(make_tuple("Á¦µå", "rebel", "inflitrator", "", 2)); // Zed
+    champions.push_back(make_tuple("¾ß½º¿À", "rebel", "blademaster", "", 2)); // Yasuo
+    champions.push_back(make_tuple("³ëÆ¿·¯½º", "astro", "vanguard", "", 2)); // Nautilus
+    champions.push_back(make_tuple("¾Æ¸®", "starguardian", "sorcerer", "", 2)); // Ahri
+    champions.push_back(make_tuple("·ç½Ã¾È", "cybernetic", "blaster", "", 2)); // Lucian
+    champions.push_back(make_tuple("ºí¸®Ã÷Å©·©Å©", "chronos", "brawler", "", 2)); // Blitzcrank
+    champions.push_back(make_tuple("½¨", "chronos", "blademaster", "", 2)); // Shen
+    champions.push_back(make_tuple("¸ğµ¥Ä«ÀÌÀú", "darkstar", "vanguard", "", 2)); // Mordekaiser
+    champions.push_back(make_tuple("´Ù¸®¿ì½º", "space_pirate", "mana_reaver", "", 2)); // Darius
+    champions.push_back(make_tuple("½ÅÂ¥¿À", "celestial", "protector", "", 2)); // Xin'Zhao
+    champions.push_back(make_tuple("¶óÄ­", "celestial", "protector", "", 2)); // Rakan
+    champions.push_back(make_tuple("ÄÚ±×¸ğ", "battlecast", "blaster", "", 2)); // Kog'maw
 
-    champions.push_back(make_tuple("ëŸ¼ë¸”", "mech_pilot", "demolitionist", "", 3)); // Rumble
-    champions.push_back(make_tuple("ë§ˆìŠ¤í„°ì´", "rebel", "blademaster", "", 3)); // Master Yi
-    champions.push_back(make_tuple("ì‹ ë“œë¼", "starguardian", "sorcerer", "", 3)); // Syndra
-    champions.push_back(make_tuple("ë‹ˆì½”", "starguardian", "protector", "", 3)); // Neeko
-    champions.push_back(make_tuple("ë°”ì´", "cybernetic", "brawler", "", 3)); // Vi
-    champions.push_back(make_tuple("ì´ì¦ˆë¦¬ì–¼", "chronos", "blaster", "", 3)); // Ezreal
-    champions.push_back(make_tuple("ì¹´ì‹œì˜¤í˜ì•„", "battlecast", "mystic", "", 3)); // Cassiopeia
-    champions.push_back(make_tuple("ì¹´ë¥´ë§ˆ", "darkstar", "mystic", "", 3)); // Karma
-    champions.push_back(make_tuple("ìƒ¤ì½”", "darkstar", "inflitrator", "", 3)); // Shaco
-    champions.push_back(make_tuple("ì œì´ìŠ¤", "space_pirate", "vanguard", "", 3)); // Jayce
-    champions.push_back(make_tuple("ì• ì‰¬", "celestial", "sniper", "", 3)); // Ashe
-    champions.push_back(make_tuple("ë°”ë“œ", "astro", "mystic", "", 3)); // Bard
-    champions.push_back(make_tuple("ë² ì¸", "cybernetic", "sniper", "", 3)); // Vayne
+    champions.push_back(make_tuple("·³ºí", "mech_pilot", "demolitionist", "", 3)); // Rumble
+    champions.push_back(make_tuple("¸¶½ºÅÍÀÌ", "rebel", "blademaster", "", 3)); // Master Yi
+    champions.push_back(make_tuple("½Åµå¶ó", "starguardian", "sorcerer", "", 3)); // Syndra
+    champions.push_back(make_tuple("´ÏÄÚ", "starguardian", "protector", "", 3)); // Neeko
+    champions.push_back(make_tuple("¹ÙÀÌ", "cybernetic", "brawler", "", 3)); // Vi
+    champions.push_back(make_tuple("ÀÌÁî¸®¾ó", "chronos", "blaster", "", 3)); // Ezreal
+    champions.push_back(make_tuple("Ä«½Ã¿ÀÆä¾Æ", "battlecast", "mystic", "", 3)); // Cassiopeia
+    champions.push_back(make_tuple("Ä«¸£¸¶", "darkstar", "mystic", "", 3)); // Karma
+    champions.push_back(make_tuple("»şÄÚ", "darkstar", "inflitrator", "", 3)); // Shaco
+    champions.push_back(make_tuple("Á¦ÀÌ½º", "space_pirate", "vanguard", "", 3)); // Jayce
+    champions.push_back(make_tuple("¾Ö½¬", "celestial", "sniper", "", 3)); // Ashe
+    champions.push_back(make_tuple("¹Ùµå", "astro", "mystic", "", 3)); // Bard
+    champions.push_back(make_tuple("º£ÀÎ", "cybernetic", "sniper", "", 3)); // Vayne
 
-    champions.push_back(make_tuple("ë¹…í† ë¥´", "battlecast", "sorcerer", "", 4)); // Viktor
-    champions.push_back(make_tuple("í‹°ëª¨", "astro", "sniper", "", 4)); // Teemo
-    champions.push_back(make_tuple("í”¼ì¦ˆ", "mech_pilot", "inflitrator", "", 4)); // Fizz
-    champions.push_back(make_tuple("ì§•í¬ìŠ¤", "rebel", "blaster", "", 4)); // Jinx
-    champions.push_back(make_tuple("ë¦¬ë¸", "chronos", "blademaster", "", 4)); // Riven
-    champions.push_back(make_tuple("ì†Œë¼ì¹´", "starguardian", "mystic", "", 4)); // Soraka
-    champions.push_back(make_tuple("ì´ë ë¦¬ì•„", "cybernetic", "blademaster", "mana_reaver", 4)); // Irelia
-    champions.push_back(make_tuple("ì˜¤ê³µ", "chronos", "vanguard", "", 4)); // Wukong
-    champions.push_back(make_tuple("ì§„", "darkstar", "sniper", "", 4)); // Jhin
-    champions.push_back(make_tuple("ë‚˜ë¥´", "astro", "brawler", "", 4)); // Gnar
+    champions.push_back(make_tuple("ºòÅä¸£", "battlecast", "sorcerer", "", 4)); // Viktor
+    champions.push_back(make_tuple("Æ¼¸ğ", "astro", "sniper", "", 4)); // Teemo
+    champions.push_back(make_tuple("ÇÇÁî", "mech_pilot", "inflitrator", "", 4)); // Fizz
+    champions.push_back(make_tuple("Â¡Å©½º", "rebel", "blaster", "", 4)); // Jinx
+    champions.push_back(make_tuple("¸®ºì", "chronos", "blademaster", "", 4)); // Riven
+    champions.push_back(make_tuple("¼Ò¶óÄ«", "starguardian", "mystic", "", 4)); // Soraka
+    champions.push_back(make_tuple("ÀÌ·¼¸®¾Æ", "cybernetic", "blademaster", "mana_reaver", 4)); // Irelia
+    champions.push_back(make_tuple("¿À°ø", "chronos", "vanguard", "", 4)); // Wukong
+    champions.push_back(make_tuple("Áø", "darkstar", "sniper", "", 4)); // Jhin
+    champions.push_back(make_tuple("³ª¸£", "astro", "brawler", "", 4)); // Gnar
 
-    champions.push_back(make_tuple("ì•„ìš°ì†”", "rebel", "starship", "", 5)); // Aurelion Sol
-    champions.push_back(make_tuple("ìš°ë¥´ê³³", "battlecast", "protector", "", 5)); // Urgot
-    champions.push_back(make_tuple("ì—ì½”", "cybernetic", "inflitrator", "", 5)); // Ekko
-    champions.push_back(make_tuple("ì“°ë ˆì‰¬", "chronos", "mana_reaver", "", 5)); // Thresh
-    champions.push_back(make_tuple("ì œë¼ìŠ¤", "darkstar", "sorcerer", "", 5)); // Xerath
-    champions.push_back(make_tuple("ê°±í”Œë­í¬", "space_pirate", "demolitionist", "mercenary", 5)); // Gangplank
-    champions.push_back(make_tuple("ë£°ë£¨", "celestial", "mystic", "", 5)); // Lulu
-    champions.push_back(make_tuple("ì”ë‚˜", "starguardian", "paragon", "", 5)); // Janna
+    champions.push_back(make_tuple("¾Æ¿ì¼Ö", "rebel", "starship", "", 5)); // Aurelion Sol
+    champions.push_back(make_tuple("¿ì¸£°÷", "battlecast", "protector", "", 5)); // Urgot
+    champions.push_back(make_tuple("¿¡ÄÚ", "cybernetic", "inflitrator", "", 5)); // Ekko
+    champions.push_back(make_tuple("¾²·¹½¬", "chronos", "mana_reaver", "", 5)); // Thresh
+    champions.push_back(make_tuple("Á¦¶ó½º", "darkstar", "sorcerer", "", 5)); // Xerath
+    champions.push_back(make_tuple("°»ÇÃ·©Å©", "space_pirate", "demolitionist", "mercenary", 5)); // Gangplank
+    champions.push_back(make_tuple("·ê·ç", "celestial", "mystic", "", 5)); // Lulu
+    champions.push_back(make_tuple("ÀÜ³ª", "starguardian", "paragon", "", 5)); // Janna
 
 
 }
@@ -157,7 +157,7 @@ void makingChampionList(int argc, char** argv) {
             }   
         }
         if (user_select_champ.size() < argc - 3) {
-            cout << "ì„ íƒí•œ ì±”í”¼ì–¸ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\nì˜¤íƒˆìê°€ ìˆëŠ”ì§€ í™•ì¸í•´ì£¼ì„¸ìš”\n";
+            cout << "¼±ÅÃÇÑ Ã¨ÇÇ¾ğÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.\n¿ÀÅ»ÀÚ°¡ ÀÖ´ÂÁö È®ÀÎÇØÁÖ¼¼¿ä\n";
             exit(0);
         }
     }
@@ -306,79 +306,79 @@ int synerge_cost(tuple <string, string, string, string, int> &selected_champion)
 string synerge_print(int index) {
     string synerge = "";
 
-    if (celestial[index] >= 2 && celestial[index] < 4) synerge.append("2ì²œìƒ ");
-    else if (celestial[index] >= 4 && celestial[index] < 6) synerge.append("4ì²œìƒ ");
-    else if (celestial[index] >= 6) synerge.append("6ì²œìƒ ");
+    if (celestial[index] >= 2 && celestial[index] < 4) synerge.append("2Ãµ»ó ");
+    else if (celestial[index] >= 4 && celestial[index] < 6) synerge.append("4Ãµ»ó ");
+    else if (celestial[index] >= 6) synerge.append("6Ãµ»ó ");
 
-    if (cybernetic[index] >= 3 && (cybernetic[index] < 6)) synerge.append("3ì‚¬ì´ë²„ë„¤í‹± ");
-    else if (cybernetic[index] >= 6 ) synerge.append("6ì‚¬ì´ë²„ë„¤í‹± ");
+    if (cybernetic[index] >= 3 && (cybernetic[index] < 6)) synerge.append("3»çÀÌ¹ö³×Æ½ ");
+    else if (cybernetic[index] >= 6 ) synerge.append("6»çÀÌ¹ö³×Æ½ ");
 
-    if (mech_pilot[index] >= 3) synerge.append("3ë©”ì¹´íŒŒì¼ëŸ¿ ");
+    if (mech_pilot[index] >= 3) synerge.append("3¸ŞÄ«ÆÄÀÏ·µ ");
 
-    if (space_pirate[index] >= 2 && (space_pirate[index] < 4)) synerge.append("2ìš°ì£¼í•´ì  ");
-    else if (space_pirate[index] >= 4) synerge.append("4ìš°ì£¼í•´ì  ");
+    if (space_pirate[index] >= 2 && (space_pirate[index] < 4)) synerge.append("2¿ìÁÖÇØÀû ");
+    else if (space_pirate[index] >= 4) synerge.append("4¿ìÁÖÇØÀû ");
 
-    if (chronos[index] >= 2 && (chronos[index] < 4)) synerge.append("2ì‹œê³µê°„ ");
-    else if (chronos[index] >= 4 && (chronos[index] < 6)) synerge.append("4ì‹œê³µê°„ ");
-    else if (chronos[index] >= 6 && chronos[index] < 8) synerge.append("6ì‹œê³µê°„ ");
-    else if (chronos[index] >= 8) synerge.append("8ì‹œê³µê°„ ");
+    if (chronos[index] >= 2 && (chronos[index] < 4)) synerge.append("2½Ã°ø°£ ");
+    else if (chronos[index] >= 4 && (chronos[index] < 6)) synerge.append("4½Ã°ø°£ ");
+    else if (chronos[index] >= 6 && chronos[index] < 8) synerge.append("6½Ã°ø°£ ");
+    else if (chronos[index] >= 8) synerge.append("8½Ã°ø°£ ");
 
-    if (darkstar[index] >= 2 && (darkstar[index] < 4)) synerge.append("2ì•”í‘ì˜ë³„ ");
-    else if (darkstar[index] >= 4 && (darkstar[index] < 6)) synerge.append("4ì•”í‘ì˜ë³„ ");
-    else if (darkstar[index] >= 6 ) synerge.append("6ì•”í‘ì˜ë³„ ");
+    if (darkstar[index] >= 2 && (darkstar[index] < 4)) synerge.append("2¾ÏÈæÀÇº° ");
+    else if (darkstar[index] >= 4 && (darkstar[index] < 6)) synerge.append("4¾ÏÈæÀÇº° ");
+    else if (darkstar[index] >= 6 ) synerge.append("6¾ÏÈæÀÇº° ");
 
-    if (rebel[index] >= 3 && (rebel[index] < 6)) synerge.append("3ë°˜êµ° ");
-    else if (rebel[index] >= 6 ) synerge.append("6ë°˜êµ° ");
+    if (rebel[index] >= 3 && (rebel[index] < 6)) synerge.append("3¹İ±º ");
+    else if (rebel[index] >= 6 ) synerge.append("6¹İ±º ");
 
-    if (starguardian[index] >= 3 && (starguardian[index] < 6)) synerge.append("3ë³„ìˆ˜í˜¸ì ");
-    else if (starguardian[index] >= 6 ) synerge.append("6ë³„ìˆ˜í˜¸ì ");
+    if (starguardian[index] >= 3 && (starguardian[index] < 6)) synerge.append("3º°¼öÈ£ÀÚ ");
+    else if (starguardian[index] >= 6 ) synerge.append("6º°¼öÈ£ÀÚ ");
 
-    if (battlecast[index] >= 2 && (battlecast[index] < 4)) synerge.append("2ì „íˆ¬ê¸°ê³„ ");
-    else if (battlecast[index] >= 4 && (battlecast[index] < 6)) synerge.append("4ì „íˆ¬ê¸°ê³„ ");
-    else if (battlecast[index] >= 6 ) synerge.append("6ì „íˆ¬ê¸°ê³„ ");
+    if (battlecast[index] >= 2 && (battlecast[index] < 4)) synerge.append("2ÀüÅõ±â°è ");
+    else if (battlecast[index] >= 4 && (battlecast[index] < 6)) synerge.append("4ÀüÅõ±â°è ");
+    else if (battlecast[index] >= 6 ) synerge.append("6ÀüÅõ±â°è ");
 
-    if (astro[index] >= 3) synerge.append("3ìš°ì£¼ë¹„í–‰ì‚¬ ");
+    if (astro[index] >= 3) synerge.append("3¿ìÁÖºñÇà»ç ");
 
-    if (blademaster[index] >= 3 && (blademaster[index] < 6)) synerge.append("3ê²€ì‚¬ ");
-    else if (blademaster[index] >= 6 ) synerge.append("6ê²€ì‚¬ ");
+    if (blademaster[index] >= 3 && (blademaster[index] < 6)) synerge.append("3°Ë»ç ");
+    else if (blademaster[index] >= 6 ) synerge.append("6°Ë»ç ");
 
-    if (brawler[index] >= 2 && (brawler[index] < 4)) synerge.append("2ì‹¸ì›€ê¾¼ ");
-    else if (brawler[index] >= 4) synerge.append("4ì‹¸ì›€ê¾¼ ");
+    if (brawler[index] >= 2 && (brawler[index] < 4)) synerge.append("2½Î¿ò²Û ");
+    else if (brawler[index] >= 4) synerge.append("4½Î¿ò²Û ");
 
-    if (demolitionist[index] >= 2) synerge.append("2í­íŒŒê´‘ ");
+    if (demolitionist[index] >= 2) synerge.append("2ÆøÆÄ±¤ ");
 
-    if (mana_reaver[index] >= 2) synerge.append("2ë§ˆë‚˜ì•½íƒˆì ");
+    if (mana_reaver[index] >= 2) synerge.append("2¸¶³ª¾àÅ»ÀÚ ");
 
-    if (mercenary[index] >= 1) synerge.append("1ìš©ë³‘ ");
+    if (mercenary[index] >= 1) synerge.append("1¿ëº´ ");
 
-    if (protector[index] >= 2 && (protector[index] < 4)) synerge.append("2ìˆ˜í˜¸ì ");
-    else if (protector[index] >= 4 && (protector[index] < 6)) synerge.append("4ìˆ˜í˜¸ì ");
-    else if (protector[index] >= 6) synerge.append("6ìˆ˜í˜¸ì ");
+    if (protector[index] >= 2 && (protector[index] < 4)) synerge.append("2¼öÈ£ÀÚ ");
+    else if (protector[index] >= 4 && (protector[index] < 6)) synerge.append("4¼öÈ£ÀÚ ");
+    else if (protector[index] >= 6) synerge.append("6¼öÈ£ÀÚ ");
 
-    if (sorcerer[index] >= 2 && (sorcerer[index] < 4)) synerge.append("2ë§ˆë²•ì‚¬ ");
-    else if (sorcerer[index] >= 4 && (sorcerer[index] < 6)) synerge.append("4ë§ˆë²•ì‚¬ ");
-    else if (sorcerer[index] >= 6 && sorcerer[index] < 8) synerge.append("6ë§ˆë²•ì‚¬ ");
-    else if (sorcerer[index] >= 8) synerge.append("8ë§ˆë²•ì‚¬ ");
+    if (sorcerer[index] >= 2 && (sorcerer[index] < 4)) synerge.append("2¸¶¹ı»ç ");
+    else if (sorcerer[index] >= 4 && (sorcerer[index] < 6)) synerge.append("4¸¶¹ı»ç ");
+    else if (sorcerer[index] >= 6 && sorcerer[index] < 8) synerge.append("6¸¶¹ı»ç ");
+    else if (sorcerer[index] >= 8) synerge.append("8¸¶¹ı»ç ");
 
-    if (starship[index] >= 1) synerge.append("1ìš°ì£¼ì„  ");
+    if (starship[index] >= 1) synerge.append("1¿ìÁÖ¼± ");
 
-    if (blaster[index] >= 2 && (blaster[index] < 4)) synerge.append("2ì´ì¡ì´ ");
-    else if (blaster[index] >= 4) synerge.append("4ì´ì¡ì´ ");
+    if (blaster[index] >= 2 && (blaster[index] < 4)) synerge.append("2ÃÑÀâÀÌ ");
+    else if (blaster[index] >= 4) synerge.append("4ÃÑÀâÀÌ ");
 
-    if (inflitrator[index] >= 2 && (inflitrator[index] < 4)) synerge.append("2ì ì…ì ");
-    else if (inflitrator[index] >= 4 && (inflitrator[index] < 6)) synerge.append("4ì ì…ì ");
+    if (inflitrator[index] >= 2 && (inflitrator[index] < 4)) synerge.append("2ÀáÀÔÀÚ ");
+    else if (inflitrator[index] >= 4 && (inflitrator[index] < 6)) synerge.append("4ÀáÀÔÀÚ ");
 
-    if (mystic[index] >= 2 && (mystic[index] < 4)) synerge.append("2ì‹ ë¹„ìˆ ì‚¬ ");
-    else if (mystic[index] >= 4) synerge.append("4ì‹ ë¹„ìˆ ì‚¬ ");
+    if (mystic[index] >= 2 && (mystic[index] < 4)) synerge.append("2½Åºñ¼ú»ç ");
+    else if (mystic[index] >= 4) synerge.append("4½Åºñ¼ú»ç ");
 
-    if (sniper[index] >= 2 && sniper[index] < 4) synerge.append("2ì €ê²©ìˆ˜ ");
-    else if (sniper[index] >= 4) synerge.append("4ì €ê²©ìˆ˜ ");
+    if (sniper[index] >= 2 && sniper[index] < 4) synerge.append("2Àú°İ¼ö ");
+    else if (sniper[index] >= 4) synerge.append("4Àú°İ¼ö ");
 
-    if (vanguard[index] >= 2 && (vanguard[index] < 4)) synerge.append("2ì„ ë´‰ëŒ€ ");
-    else if (vanguard[index] >= 4 && vanguard[index] < 6) synerge.append("4ì„ ë´‰ëŒ€ ");
-    else if (vanguard[index] >= 6 && vanguard[index] < 8) synerge.append("6ì„ ë´‰ëŒ€ ");
+    if (vanguard[index] >= 2 && (vanguard[index] < 4)) synerge.append("2¼±ºÀ´ë ");
+    else if (vanguard[index] >= 4 && vanguard[index] < 6) synerge.append("4¼±ºÀ´ë ");
+    else if (vanguard[index] >= 6 && vanguard[index] < 8) synerge.append("6¼±ºÀ´ë ");
 
-    if (paragon[index] >= 1) synerge.append("1ì¸ë„ì ");
+    if (paragon[index] >= 1) synerge.append("1ÀÎµµÀÚ ");
 
     return synerge;
 }
@@ -537,7 +537,7 @@ int main (int argc, char** argv) {
     // level check
     if (level <= 4) {
         if (selected_size > level) {
-            cout << "ë ˆë²¨ë³´ë‹¤ ì±”í”„ìˆ˜ê°€ ë” ë§ìŠµë‹ˆë‹¤. error(-1)" << "\n";
+            cout << "·¹º§º¸´Ù Ã¨ÇÁ¼ö°¡ ´õ ¸¹½À´Ï´Ù. error(-1)" << "\n";
             exit(-1);
         }
         else if (selected_size == level) combination_level4_down(0, 0);
@@ -555,7 +555,7 @@ int main (int argc, char** argv) {
 
     else if (level > 4 && level <= 6) {
         if (selected_size > level) {
-            cout << "ë ˆë²¨ë³´ë‹¤ ì±”í”„ìˆ˜ê°€ ë” ë§ìŠµë‹ˆë‹¤. error(-1)" << "\n";
+            cout << "·¹º§º¸´Ù Ã¨ÇÁ¼ö°¡ ´õ ¸¹½À´Ï´Ù. error(-1)" << "\n";
             exit(-1);
         }
         else if (selected_size == level) combination_level6_down(0, 0);
@@ -573,7 +573,7 @@ int main (int argc, char** argv) {
 
     else {
         if (selected_size > level) {
-            cout << "ë ˆë²¨ë³´ë‹¤ ì±”í”„ìˆ˜ê°€ ë” ë§ìŠµë‹ˆë‹¤. error(-1)" << "\n";
+            cout << "·¹º§º¸´Ù Ã¨ÇÁ¼ö°¡ ´õ ¸¹½À´Ï´Ù. error(-1)" << "\n";
             exit(-1);
         }
         else if (selected_size == level) combination_level7_up(0, 0);
@@ -593,18 +593,18 @@ int main (int argc, char** argv) {
     cout << "calculation time: " << (double)(end - start) << "\n";
 
     // print
-    cout << "ì´ ê°¯ìˆ˜: " << overall_combination.size() << "\n";
-    cout << "ìµœê³  ì‹œë„ˆì§€ ì ìˆ˜: " << get<0>(overall_combination.top()) << "\n";
-    cout << "LEVEL" << level << " ì¡°í•©" << "\n";
+    cout << "ÃÑ °¹¼ö: " << overall_combination.size() << "\n";
+    cout << "ÃÖ°í ½Ã³ÊÁö Á¡¼ö: " << get<0>(overall_combination.top()) << "\n";
+    cout << "LEVEL" << level << " Á¶ÇÕ" << "\n";
 
     int loop = stoi(argv[2]) < overall_combination.size() ? stoi(argv[2]) : overall_combination.size();
 
     for (int i = 0; i < loop; i++) {
-        cout << "ì¡°í•© " << i+1 << "\n";
-        cout << "  ì±”í”¼ì–¸: " << get<2>(overall_combination.top()) << "\n";
-        cout << "  ì‹œë„ˆì§€: " << get<3>(overall_combination.top()) << "\n";
-        cout << "  ì‹œë„ˆì§€ ì ìˆ˜: " << get<0>(overall_combination.top()) << "\n";
-        cout << "  ì½”ìŠ¤íŠ¸: " << get<1>(overall_combination.top()) << "\n\n\n";
+        cout << "Á¶ÇÕ " << i+1 << "\n";
+        cout << "  Ã¨ÇÇ¾ğ: " << get<2>(overall_combination.top()) << "\n";
+        cout << "  ½Ã³ÊÁö: " << get<3>(overall_combination.top()) << "\n";
+        cout << "  ½Ã³ÊÁö Á¡¼ö: " << get<0>(overall_combination.top()) << "\n";
+        cout << "  ÄÚ½ºÆ®: " << get<1>(overall_combination.top()) << "\n\n\n";
         overall_combination.pop();
     }
     return 0;
